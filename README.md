@@ -1,3 +1,7 @@
+## Live Demo
+
+[For live demo click here](https://boxofficeappbydeepu.surge.sh/)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
