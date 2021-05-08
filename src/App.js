@@ -1,21 +1,36 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
 
 import Home from "./pages/Home";
+import Show from "./pages/Show";
 import Starred from "./pages/Starred";
+
+const theme = {
+  mainColors: {
+    blue: "#2400ff",
+    gray: "#c6c6c6",
+    dark: "#353535",
+  },
+};
 
 const App = () => {
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/starred">
-          <Starred />
-        </Route>
-      </Switch>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/starred">
+            <Starred />
+          </Route>
+          <Route path="/show/:id">
+            <Show />
+          </Route>
+        </Switch>
+      </Router>
+    </ThemeProvider>
   );
 };
 
